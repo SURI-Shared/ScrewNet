@@ -1,0 +1,25 @@
+name: screwNet
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - dill
+  - matplotlib
+  - pytorch
+  - scipy
+  - ipython
+  - mkl
+  - numpy
+  - torchvision
+  - scikit-image
+  - pandas
+  - opencv
+  - numba
+  - tensorboard
+  - pathos
+  - quaternion
+  - transforms3d
+  - pip
+    - torchgeometry
+prefix: C:\Users\geord\miniconda3\envs\screwNet
