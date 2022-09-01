@@ -20,6 +20,10 @@ dependencies:
   - pathos
   - quaternion
   - transforms3d
+  - h5py
+  - pybind11
   - pip
+    - dq3d
     - torchgeometry
+  
 prefix: C:\Users\geord\miniconda3\envs\screwNet
