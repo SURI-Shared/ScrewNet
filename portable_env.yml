@@ -4,6 +4,7 @@ channels:
   - pytorch
   - defaults
 dependencies:
+  - python=3.9
   - dill
   - matplotlib
   - pytorch
@@ -23,6 +24,7 @@ dependencies:
   - h5py
   - pybind11
   - pip
+  - pip:
     - dq3d
     - torchgeometry
   
