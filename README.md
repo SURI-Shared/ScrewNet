@@ -10,6 +10,7 @@ cd /path/to/the/repository/
 conda env create -f environment.yaml
 conda activate screwNet
 ```
+On Windows, you can try to manually install Visual Studio Build Tools to get a Visual C++ install to install dq3d via pip. But the build script will probably still fail.
 
 ### Download datasets and pretrained model weights
 * Evaluation datasets: [Link](https://drive.google.com/file/d/1ot5U2KW-gwarPX-qLiHdSJYau0KQNsVk/view?usp=sharing)
