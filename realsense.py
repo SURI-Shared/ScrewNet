@@ -48,3 +48,33 @@ def process_realsense(duration):
         prediction=prediction[0,1:,:]
         prediction=prediction.cpu()
     return cimages,dimages,depth,prediction
+
+class IndexTracker:
+    '''
+    Call with an axis and a stack of images
+    
+    Then, select the figure window and press f (or F) to advance a frame, l or L to go back
+    '''
+    def __init__(self,ax,image_stack):
+        self.ax=ax
+        self.image_stack=image_stack
+        self.index=0
+        self.img=ax.imshow(self.image_stack[self.index])
+        self.ax.figure.canvas.mpl_connect('key_press_event',self.on_key)
+        
+    def on_key(self,event):
+        key=event.key
+        if key=="l" or key=="L":
+                self.index-=1
+                if self.index<0:
+                    self.index=0
+        elif key=="f" or key=="F":
+            self.index+=1
+            if self.index>=len(self.image_stack):
+                self.index=len(self.image_stack)-1
+        self.update()
+    def update(self):
+        self.img.set_data(self.image_stack[self.index])
+        self.ax.figure.canvas.draw()
+        
+    
